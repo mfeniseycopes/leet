@@ -26,7 +26,7 @@ a scrambled string "rgeat".
 r   g  e   at
            / \
           a   t
-          ```
+```
 We say that "rgeat" is a scrambled string of "great".
 
 Similarly, if we continue to swap the children of nodes "eat" and "at", it
@@ -45,7 +45,7 @@ We say that "rgtae" is a scrambled string of "great".
 Given two strings str1 and str2 of the same length, determine if str2 is a scrambled
 string of str1.
 
-## Solution
+## Solution : O(n^2)
 This one took me waay to long. By looking at the tree structure we can determine
 that recursion is a potential solution.
 
@@ -62,3 +62,7 @@ of eachother.
 Trivially, the base case is when `str1` and `str2` are both of length 1. Returning
 the result of str1 == str2. We can escape a recursive dive a little easier by
 comparing character counts at each successive call.
+
+### Complexity
+Iterates over string of length `n`, making recursive dives of at most depth `n`.
+Complexity is O(n).
